@@ -30,13 +30,13 @@ pipeline{
 
         stage('Quality Gate'){
             steps{
-              sonarQube()
+              qualityGate()
             }
         }
 
         stage('Nexus Artifact Upload'){
             steps{
-              sonarQube()
+              nexusArtifactsUpload()
             }
         }
     }
