@@ -27,5 +27,17 @@ pipeline{
               sonarQube()
             }
         }
+
+        stage('Quality Gate'){
+            steps{
+              sonarQube()
+            }
+        }
+
+        stage('Nexus Artifact Upload'){
+            steps{
+              sonarQube()
+            }
+        }
     }
 }
