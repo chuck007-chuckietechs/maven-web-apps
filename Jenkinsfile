@@ -39,5 +39,16 @@ pipeline{
               nexusArtifactsUpload()
             }
         }
+
+        stage('Deployment'){
+            steps{
+              tomcatDeploy()
+            }
+        }
+        stage('Email Notification'){
+            steps{
+              emailNotify()
+            }
+        }
     }
 }
